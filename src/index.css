@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --font-main: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  /* Zinc Palette */
+  --z-50: #fafafa;
+  --z-100: #f4f4f5;
+  --z-200: #e4e4e7;
+  --z-300: #d4d4d8;
+  --z-400: #475569; /* Transitioned Zinc-400 to Dark Navy */
+  --z-500: #334155;
+  --z-600: #52525b;
+  --z-700: #3f3f46;
+  --z-800: #27272a;
+  --z-900: #18181b;
+  --z-950: #09090b;
+
+  /* Default (Dark) Mappings */
+  --bg-p: var(--z-950);
+  --bg-s: var(--z-900);
+  --bg-t: var(--z-800);
+  --text-p: var(--z-300);
+  --text-s: var(--z-500);
+  --border: var(--z-800);
+
+  --accent-color: #6366f1;
+  --accent-hover: #4f46e5;
+
+  /* Tailwind Scale Overrides (Dark) */
+  --zinc-950: var(--z-950);
+  --zinc-900: var(--z-900);
+  --zinc-800: var(--z-800);
+  --zinc-700: var(--z-700);
+  --zinc-600: var(--z-600);
+  --zinc-500: var(--z-500);
+  --zinc-400: var(--z-400);
+  --zinc-300: var(--z-300);
+  --zinc-200: var(--z-200);
+  --zinc-100: var(--z-100);
+  --zinc-50: var(--z-50);
+
+  font-family: var(--font-main);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+:root.light {
+  /* Light Mode Mappings */
+  --bg-p: #ffffff;
+  --bg-s: var(--z-100);
+  --bg-t: var(--z-200);
+  --text-p: var(--z-950);
+  --text-s: var(--z-600);
+  --border: var(--z-200);
+
+  --accent-color: #4f46e5;
+  --accent-hover: #4338ca;
+
+  /* Tailwind Scale Overrides (Light - Inverted) */
+  --zinc-950: #ffffff;
+  --zinc-900: var(--z-100);
+  --zinc-800: var(--z-200);
+  --zinc-700: var(--z-300);
+  --zinc-600: var(--z-500);
+  --zinc-500: var(--z-600);
+  --zinc-400: var(--z-700);
+  --zinc-300: var(--z-800);
+  --zinc-200: var(--z-900);
+  --zinc-100: var(--z-950);
+  --zinc-50: var(--z-950);
+
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--zinc-950);
+  color: var(--zinc-300);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+#root {
+  width: 100%;
+}
+
+@theme {
+  --color-zinc-950: var(--zinc-950);
+  --color-zinc-900: var(--zinc-900);
+  --color-zinc-800: var(--zinc-800);
+  --color-zinc-700: var(--zinc-700);
+  --color-zinc-600: var(--zinc-600);
+  --color-zinc-500: var(--zinc-500);
+  --color-zinc-400: var(--zinc-400);
+  --color-zinc-300: var(--zinc-300);
+  --color-zinc-200: var(--zinc-200);
+  --color-zinc-100: var(--zinc-100);
+  --color-zinc-50: var(--zinc-50);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--zinc-800);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--zinc-600);
+}
+
+/* Global Prose Overrides for Dark Mode - Anti-White */
+.prose-invert {
+  --tw-prose-body: var(--z-400) !important;
+  --tw-prose-headings: var(--z-300) !important;
+  --tw-prose-lead: var(--z-400) !important;
+  --tw-prose-links: var(--z-300) !important;
+  --tw-prose-bold: var(--z-300) !important;
+  --tw-prose-counters: var(--z-500) !important;
+  --tw-prose-bullets: var(--z-600) !important;
+  --tw-prose-hr: var(--z-800) !important;
+  --tw-prose-quotes: var(--z-300) !important;
+  --tw-prose-quote-borders: var(--z-800) !important;
+  --tw-prose-captions: var(--z-500) !important;
+  --tw-prose-code: #818cf8 !important; /* Muted Indigo */
+  --tw-prose-pre-code: var(--z-300) !important;
+  --tw-prose-pre-bg: var(--z-950) !important;
+  --tw-prose-th-borders: var(--z-700) !important;
+  --tw-prose-td-borders: var(--z-800) !important;
+}

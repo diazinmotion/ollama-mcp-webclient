@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+httpx
+mlflow
+sqlite3

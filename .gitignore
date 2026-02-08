@@ -1,0 +1,52 @@
+# Common Node.js / Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+mcp-servers/__pycache__/
+mcp-servers/*.py[cod]
+mcp-servers/*$py.class
+mcp-servers/*.so
+mcp-servers/.venv/
+mcp-servers/venv/
+mcp-servers/env/
+mcp-servers/*.egg-info/
+mcp-servers/.pytest_cache/
+mcp-servers/.mypy_cache/
+mcp-servers/.uv/
+
+# Databases and Persistent Storage
+*.db
+*.db-journal
+*.sqlite3
+storage/qdrant/
+storage/mlflow/
+
+# Logs
+logs/
+*.log
+mcp_server.log
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Project Specific
+dist/
+.temp/
+.cache/
